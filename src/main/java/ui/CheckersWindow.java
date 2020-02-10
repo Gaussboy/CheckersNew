@@ -11,8 +11,6 @@ import model.Player;
 
 class CheckersWindow extends JFrame {
 
-	private static final long serialVersionUID = 8782122389400590079L;
-
 	private static final int DEFAULT_WIDTH = 500;
 
 	private static final int DEFAULT_HEIGHT = 600;
@@ -24,6 +22,7 @@ class CheckersWindow extends JFrame {
 
 	CheckersWindow() {
 		this(DEFAULT_WIDTH, DEFAULT_HEIGHT, DEFAULT_TITLE);
+
 	}
 
 	private CheckersWindow(int width, int height, String title) {
@@ -57,5 +56,4 @@ class CheckersWindow extends JFrame {
 		this.board.getGame().restart();
 		this.board.update();
 	}
-
 }

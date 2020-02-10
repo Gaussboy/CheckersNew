@@ -20,9 +20,6 @@ import model.Player;
 
 public class CheckerBoard extends JButton {
 
-	private static final long serialVersionUID = -6014690893709316364L;
-	
-
 	private static final int TIMER_DELAY = 1000;
 
 	private static final int PADDING = 16;
@@ -73,7 +70,6 @@ public class CheckerBoard extends JButton {
 	}
 	
 	private void runPlayer() {
-
 		Player player = getCurrentPlayer();
 		if (player == null || player.isHuman() ) {
 			return;
