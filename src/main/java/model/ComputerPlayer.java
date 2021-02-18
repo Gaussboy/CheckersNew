@@ -142,7 +142,7 @@ public class ComputerPlayer extends Player {
 		boolean isKing;
 		m.changeWeight(getSafetyWeight(b, game.isP1Turn()));
 		if (!game.move(m.getStartIndex(), m.getEndIndex())) {
-			m.setWeight(Move.WEIGHT_INVALID);
+			m.setWeight();
 			return;
 		}
 		b = game.getBoard();

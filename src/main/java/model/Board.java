@@ -174,7 +174,6 @@ public class Board {
 	
 
 	public static boolean isValidPoint(Point testPoint) {
-		
 		if (testPoint == null) {
 			return false;
 		}

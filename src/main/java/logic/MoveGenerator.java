@@ -31,7 +31,6 @@ public class MoveGenerator {
 	}
 
 	public static List<Point> getSkips(Board board, int startIndex) {
-		
 
 		List<Point> endPoints = new ArrayList<>();
 		if (board == null || !Board.isValidIndex(startIndex)) {

@@ -22,15 +22,12 @@ class CheckersWindow extends JFrame {
 
 	CheckersWindow() {
 		this(DEFAULT_WIDTH, DEFAULT_HEIGHT, DEFAULT_TITLE);
-
 	}
 
 	private CheckersWindow(int width, int height, String title) {
-
 		super(title);
 		super.setSize(width, height);
 		super.setLocationByPlatform(true);
-
 		JPanel layout = new JPanel(new BorderLayout());
 		this.board = new CheckerBoard(this);
 		OptionPanel opts = new OptionPanel(this);

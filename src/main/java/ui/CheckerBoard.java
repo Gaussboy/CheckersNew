@@ -61,14 +61,14 @@ public class CheckerBoard extends JButton {
 		setPlayer1(player1);
 		setPlayer2(player2);
 	}
-	
+
 
 	void update() {
 		runPlayer();
 		this.isGameOver = game.isGameOver();
 		repaint();
 	}
-	
+
 	private void runPlayer() {
 		Player player = getCurrentPlayer();
 		if (player == null || player.isHuman() ) {
@@ -277,7 +277,7 @@ public class CheckerBoard extends JButton {
 
 		this.selectionValid = isValidSelection(
 				copy.getBoard(), copy.isP1Turn(), selected);
-		
+
 		update();
 	}
 

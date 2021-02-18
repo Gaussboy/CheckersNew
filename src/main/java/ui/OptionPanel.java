@@ -12,8 +12,6 @@ import model.Player;
 
 class OptionPanel extends JPanel {
 
-	private static final long serialVersionUID = -4763875452164030755L;
-
 	private CheckersWindow window;
 
 	private JButton helpBtn;
@@ -27,39 +25,31 @@ class OptionPanel extends JPanel {
 
 	OptionPanel(CheckersWindow window) {
 		super(new GridLayout(0, 1));
-		
+
 		this.window = window;
 
 		OptionListener ol = new OptionListener();
 		final String[] playerTypeOpts = {"Human", "Computer"};
-		this.helpBtn = new JButton("Help");
-		this.restartBtn = new JButton("Restart");
-		this.player1Opts = new JComboBox<>(playerTypeOpts);
-		this.player2Opts = new JComboBox<>(playerTypeOpts);
-		this.restartBtn.addActionListener(ol);
-		this.helpBtn.addActionListener(ol);
-		this.player1Opts.addActionListener(ol);
-		this.player2Opts.addActionListener(ol);
+		helpBtn = new JButton("Help");
+		restartBtn = new JButton("Restart");
+		player1Opts = new JComboBox<>(playerTypeOpts);
+		player2Opts = new JComboBox<>(playerTypeOpts);
+		restartBtn.addActionListener(ol);
+		helpBtn.addActionListener(ol);
+		player1Opts.addActionListener(ol);
+		player2Opts.addActionListener(ol);
 		JPanel top = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		JPanel middle = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		JPanel bottom = new JPanel(new FlowLayout(FlowLayout.LEFT));
-		JButton player1Btn = new JButton();
-		player1Btn.addActionListener(ol);
-		player1Btn.setVisible(false);
-		JButton player2Btn = new JButton();
-		player2Btn.addActionListener(ol);
-		player2Btn.setVisible(false);
 		top.add(helpBtn);
 		top.add(restartBtn);
 		middle.add(new JLabel("(black) Player 1: "));
 		middle.add(player1Opts);
-		middle.add(player1Btn);
 		bottom.add(new JLabel("(white) Player 2: "));
 		bottom.add(player2Opts);
-		bottom.add(player2Btn);
-		this.add(top);
-		this.add(middle);
-		this.add(bottom);
+		add(top);
+		add(middle);
+		add(bottom);
 	}
 
 	private static Player getPlayer(JComboBox<String> playerOpts) {

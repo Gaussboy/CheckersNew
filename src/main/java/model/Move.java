@@ -46,8 +46,8 @@ public class Move {
 		return weight;
 	}
 
-	void setWeight(double weight) {
-		this.weight = weight;
+	void setWeight() {
+		this.weight = Move.WEIGHT_INVALID;
 	}
 	
 	void changeWeight(double delta) {
